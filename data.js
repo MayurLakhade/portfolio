@@ -190,3 +190,6 @@ const PORTFOLIO = {
     note: "Designed & built with care.",
   },
 };
+
+// Makes the content above available to the page. Leave this line in place.
+window.PORTFOLIO = PORTFOLIO;
