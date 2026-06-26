@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayur Lakhade · Backend Software Engineer</title>
+  <meta name="description" content="Mayur Lakhade — Software Engineer specializing in scalable backend systems with Node.js, Express.js, Spring Boot, and MySQL." />
+  <meta name="author" content="Mayur Lakhade" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Mayur Lakhade · Backend Software Engineer" />
+  <meta property="og:description" content="Scalable, production-ready backend systems powering live mobile & web apps." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/profile.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+</head>
+<body>
+
+  <!-- Animated background layers -->
+  <div class="bg-aura" aria-hidden="true"></div>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <header class="nav" id="nav">
+    <a href="#home" class="nav__brand">ML<span>.</span></a>
+    <nav class="nav__links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--ghost btn--sm" id="navResume" href="#" download>Resume</a>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__inner">
+        <div class="hero__text reveal">
+          <p class="hero__eyebrow"><span class="dot"></span><span id="availability"></span></p>
+          <h1 class="hero__name" id="heroName"></h1>
+          <h2 class="hero__role">
+            <span class="hero__role-static">Building</span>
+            <span class="rotator" id="rotator"></span>
+          </h2>
+          <p class="hero__tagline" id="heroTagline"></p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#projects">View My Work</a>
+            <a class="btn btn--outline" id="heroResume" href="#" download>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+              Download Resume
+            </a>
+          </div>
+          <div class="hero__social" id="heroSocial"></div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="photo-ring">
+            <div class="photo-frame">
+              <img id="heroPhoto" alt="Mayur Lakhade" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__num">01</span>
+        <h2 class="section__title" id="aboutHeading"></h2>
+      </div>
+      <div class="about reveal">
+        <div class="about__text" id="aboutText"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__num">02</span>
+        <h2 class="section__title">Skills &amp; Tech Stack</h2>
+      </div>
+      <div class="skills" id="skillsGrid"></div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <span class="section__num">03</span>
+        <h2 class="section__title">Experience</h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="section__head reveal">
+        <span class="section__num">04</span>
+        <h2 class="section__title">Featured Projects</h2>
+      </div>
+      <div class="projects" id="projectsGrid"></div>
+    </section>
+
+    <!-- EDUCATION + CERTS + ACHIEVEMENTS -->
+    <section class="section" id="education">
+      <div class="section__head reveal">
+        <span class="section__num">05</span>
+        <h2 class="section__title">Education &amp; Credentials</h2>
+      </div>
+      <div class="creds">
+        <div class="creds__col reveal">
+          <h3 class="creds__label">Education</h3>
+          <div id="educationList"></div>
+        </div>
+        <div class="creds__col reveal">
+          <h3 class="creds__label">Certifications</h3>
+          <div id="certList"></div>
+        </div>
+        <div class="creds__col reveal">
+          <h3 class="creds__label">Achievements</h3>
+          <ul class="achievements" id="achievementsList"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section section--contact" id="contact">
+      <div class="contact reveal">
+        <span class="section__num">06</span>
+        <h2 class="contact__title">Let's build something together.</h2>
+        <p class="contact__sub">Have a role or a project in mind? I'd love to hear about it.</p>
+        <a class="btn btn--primary btn--lg" id="contactEmail" href="#">Get in touch</a>
+        <div class="contact__links" id="contactLinks"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p id="footerName"></p>
+    <p class="footer__note" id="footerNote"></p>
+  </footer>
+
+  <a href="#home" class="to-top" id="toTop" aria-label="Back to top">↑</a>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
