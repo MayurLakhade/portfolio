@@ -102,6 +102,7 @@ const PORTFOLIO = {
       tags: ["Node.js", "Express.js", "MySQL", "Razorpay", "Socket.io", "Cron"],
       links: [
         { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.wertone.dailysabji&pcampaignid=web_share", type: "playstore" },
+        { label: "App Store", url: "https://apps.apple.com/in/app/daily-sabji/id6756043023", type: "appstore" },
         { label: "Website", url: "https://dailysabji.com", type: "web" },
       ],
     },
@@ -124,6 +125,7 @@ const PORTFOLIO = {
       tags: ["Node.js", "Express.js", "MySQL", "Firebase", "Redis"],
       links: [
         { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.wertone.gymfitness&hl=en_IN", type: "playstore" },
+        { label: "App Store", url: "https://apps.apple.com/in/app/gymnix/id6759082865", type: "appstore" },
         { label: "Website", url: "https://gymnix.in/LandingPage", type: "web" },
       ],
     },
@@ -145,6 +147,7 @@ const PORTFOLIO = {
       tags: ["Node.js", "Express.js", "MySQL", "Search APIs"],
       links: [
         { label: "Play Store", url: "https://play.google.com/store/apps/details?id=com.wertone.servicediaryy&pcampaignid=web_share", type: "playstore" },
+        { label: "App Store", url: "https://apps.apple.com/in/app/service-diary/id6759966223", type: "appstore" },
       ],
     },
     {

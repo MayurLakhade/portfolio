@@ -19,6 +19,7 @@
     email: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7L22 6"/></svg>',
     phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
     playstore: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 13 11.2 3.9 20.3a2 2 0 0 1-.3-1V2.8c0-.4.1-.7.3-1zm10.9 10.9 2.7 2.7-9.3 5.3 6.6-8zm3.9-1.3 2.4 1.4c1 .6 1 2 0 2.6l-2.4 1.4-3-3 3-2.4zM5 1.5l9.5 5.4-2.7 2.7L5 1.5z"/></svg>',
+    appstore: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.5c0-2 1.6-3 1.7-3-1-1.4-2.4-1.6-2.9-1.6-1.2-.1-2.4.7-3 .7-.6 0-1.6-.7-2.6-.7-1.3 0-2.6.8-3.2 2-1.4 2.4-.4 5.9 1 7.8.6.9 1.4 2 2.4 1.9 1-.04 1.3-.6 2.5-.6 1.1 0 1.5.6 2.5.6 1 0 1.7-.9 2.3-1.9.5-.7.9-1.5 1-1.6-.02-.01-2-.8-2-3zM14.6 6.3c.5-.7.9-1.6.8-2.5-.8.03-1.7.5-2.3 1.2-.5.6-.9 1.5-.8 2.4.9.07 1.7-.4 2.3-1.1z"/></svg>',
     web: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18z"/></svg>',
     link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>',
   };
@@ -119,9 +120,12 @@
     }
 
     const links = el("div", "proj__links");
+    const arrow = '<svg class="proj__ext" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M7 17 17 7M8 7h9v9"/></svg>';
     (p.links || []).forEach((l) => {
-      const a = el("a", "proj__link", (ICONS[l.type] || ICONS.link) + "<span>" + l.label + "</span>");
+      const a = el("a", "proj__link proj__link--" + (l.type || "link"),
+        (ICONS[l.type] || ICONS.link) + "<span>" + l.label + "</span>" + arrow);
       a.href = l.url; a.target = "_blank"; a.rel = "noopener";
+      a.setAttribute("aria-label", p.name + " on " + l.label);
       links.appendChild(a);
     });
     card.appendChild(links);
