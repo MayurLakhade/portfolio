@@ -39,8 +39,8 @@ const PORTFOLIO = {
 
   /* ---- Quick stats shown in hero / about ---- */
   stats: [
-    { value: "1+",  label: "Years Experience" },
-    { value: "9+",  label: "Live Apps & Sites" },
+    { value: "1.8+",  label: "Years Experience" },
+    { value: "10+",  label: "Live Apps & Sites" },
     { value: "5+",  label: "Production Backends" },
     { value: "∞",   label: "APIs Shipped" },
   ],
