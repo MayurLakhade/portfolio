@@ -13,7 +13,7 @@ const PORTFOLIO = {
     role: "Software Engineer · Backend Developer",
     // Short punchy line shown under your name
     tagline: "I build scalable, production-ready backend systems that power live mobile & web apps.",
-    photo: "assets/profile.jpg",            // replace this file to change your photo
+    photo: "assets/profile.png",            // replace this file to change your photo
     resume: "assets/Mayur_Lakhade_Resume.pdf", // replace this file to update your resume
     location: "Nagpur, Maharashtra, India",
     availability: "Open to new opportunities",
