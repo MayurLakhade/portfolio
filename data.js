@@ -39,7 +39,7 @@ const PORTFOLIO = {
 
   /* ---- Quick stats shown in hero / about ---- */
   stats: [
-    { value: "1.8+",  label: "Years Experience" },
+    { value: "2+",  label: "Years Experience" },
     { value: "10+",  label: "Live Apps & Sites" },
     { value: "5+",  label: "Production Backends" },
     { value: "∞",   label: "APIs Shipped" },
@@ -49,7 +49,7 @@ const PORTFOLIO = {
   about: {
     heading: "About Me",
     paragraphs: [
-      "Software Engineer with 1+ year of hands-on experience designing, developing, and maintaining scalable systems using Node.js, Express.js, Spring Boot, and MySQL.",
+      "Software Engineer with 2+ year of hands-on experience designing, developing, and maintaining scalable systems using Node.js, Express.js, Spring Boot, and MySQL.",
       "I specialize in building production-ready REST APIs, authentication systems, payment integrations, automated cron workflows, and real-time services — the backend backbone behind live mobile and web applications.",
       "I care deeply about backend architecture, database optimization, and API performance tuning, and I've shipped the systems that keep multiple production apps running smoothly every day.",
     ],
